@@ -41,11 +41,6 @@ You may want to isolate filters in a dedicated file to avoid repetition:
 ```yaml
 # api/config/filters.yaml
 services:
-    _defaults:
-        autowire: false
-        autoconfigure: false
-        public: false
-
     offer.date_filter:
         parent: 'api_platform.doctrine.orm.date_filter'
         arguments: [ { dateProperty: ~ } ]
